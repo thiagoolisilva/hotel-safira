@@ -139,7 +139,7 @@ ul  { list-style: none; }
    HEADER  — always transparent, never solid
    ========================================= */
 .header {
-  position: fixed;
+  position: absolute;
   top: 0; left: 0; right: 0;
   z-index: 1000;
   height: var(--header-height);
@@ -1100,12 +1100,8 @@ ul  { list-style: none; }
   /* default: text left, image right */
 }
 @media (min-width: 768px) {
-  .svc-row { grid-template-columns: 1fr 1fr; min-height: 380px; }
-}
-
-/* On desktop: reversed moves image to the left */
-@media (min-width: 768px) {
-  .svc-row--reversed .svc-row__img  { order: -1; }
+  .svc-row           { grid-template-columns: 1fr 2fr; min-height: 320px; }
+  .svc-row--reversed { grid-template-columns: 2fr 1fr; }
 }
 
 .svc-row--alt { background: #f4f4f4; }
