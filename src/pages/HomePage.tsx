@@ -3,8 +3,8 @@ import About from '../components/About'
 import ServicesTeaser from '../components/ServicesTeaser'
 import Accommodations from '../components/Accommodations'
 import Offers from '../components/Offers'
+import ExclusiveOffer from '../components/ExclusiveOffer'
 import Reviews from '../components/Reviews'
-import ContactCta from '../components/ContactCta'
 
 export default function HomePage() {
   return (
@@ -14,8 +14,8 @@ export default function HomePage() {
       <Accommodations />
       <ServicesTeaser />
       <Offers />
+      <ExclusiveOffer />
       <Reviews />
-      <ContactCta />
     </>
   )
 }

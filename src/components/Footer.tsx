@@ -80,12 +80,6 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>© 2026 Safira Praia Hotel. Todos os direitos reservados.</p>
-          <p>
-            Desenvolvido por{' '}
-            <a href="https://dashmarketing.com.br" target="_blank" rel="noopener noreferrer">
-              DASH Marketing
-            </a>
-          </p>
         </div>
       </div>
     </footer>

@@ -73,31 +73,26 @@ export default function ServicesPage() {
       {/* Full-bleed alternating service rows */}
       {services.map((service, index) => {
         const reversed = index % 2 !== 0
-        const body = (
-          <div className="svc-row__body">
-            <h2 className="svc-row__title">{service.title}</h2>
-            <p className="svc-row__text">{service.description}</p>
-            <a
-              href="https://wa.me/5573988613327"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ver-mais"
-            >
-              RESERVAR
-            </a>
-          </div>
-        )
-        const img = (
-          <div className="svc-row__img">
-            <img src={service.image} alt={service.title} loading="lazy" />
-          </div>
-        )
         return (
           <div
             key={service.title}
             className={`svc-row${reversed ? ' svc-row--reversed svc-row--alt' : ''}`}
           >
-            {reversed ? <>{img}{body}</> : <>{body}{img}</>}
+            <div className="svc-row__body">
+              <h2 className="svc-row__title">{service.title}</h2>
+              <p className="svc-row__text">{service.description}</p>
+              <a
+                href="https://wa.me/5573988613327"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ver-mais"
+              >
+                RESERVAR
+              </a>
+            </div>
+            <div className="svc-row__img">
+              <img src={service.image} alt={service.title} loading="lazy" />
+            </div>
           </div>
         )
       })}
