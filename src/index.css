@@ -1143,8 +1143,9 @@ ul  { list-style: none; }
    PAGE HERO (Services / Contact pages)
    ========================================= */
 .page-hero {
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-  padding: calc(var(--header-height) + 3.5rem) 0 3.5rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   text-align: center;
   color: white;
   position: relative;
@@ -1154,10 +1155,15 @@ ul  { list-style: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&q=60') center/cover no-repeat;
-  opacity: 0.12;
+  background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80') center/cover no-repeat;
 }
-.page-hero > .container { position: relative; z-index: 1; }
+.page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(5,20,50,0.78) 0%, rgba(5,20,50,0.52) 55%, rgba(5,20,50,0.72) 100%);
+}
+.page-hero > .container { position: relative; z-index: 1; padding-top: 5rem; width: 100%; }
 
 .breadcrumb {
   display: flex;
@@ -1322,6 +1328,35 @@ ul  { list-style: none; }
   color: var(--color-text-light);
   line-height: 1.7;
   margin: 0;
+}
+
+/* =========================================
+   SERVICES PAGE — slide-in scroll animations
+   ========================================= */
+@keyframes slide-from-left {
+  from { opacity: 0; transform: translateX(-70px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slide-from-right {
+  from { opacity: 0; transform: translateX(70px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.svc-page .svc-row {
+  opacity: 0;
+  width: min(var(--container-max), calc(100% - 3rem));
+  margin: 0 auto 1.25rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .svc-page .svc-row { height: 320px; }
+}
+.svc-page .svc-row.is-visible {
+  animation: slide-from-left 0.72s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+.svc-page .svc-row--reversed.is-visible {
+  animation: slide-from-right 0.72s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
 /* "VER MAIS" — outlined rectangular button */

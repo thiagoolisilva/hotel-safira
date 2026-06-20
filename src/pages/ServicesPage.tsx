@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
+import ExclusiveOffer from '../components/ExclusiveOffer'
 import Reviews from '../components/Reviews'
 
 interface Service {
@@ -36,7 +38,7 @@ const services: Service[] = [
     title: 'Bar de Piscina',
     description:
       'Experimente nossos drinks tropicais, bebidas geladas e petiscos deliciosos sem sair da área da piscina. O lugar perfeito para relaxar com uma bebida na mão ao sol da Bahia.',
-    image: 'https://images.unsplash.com/photo-1572816388434-b6cd09ca7ca0?w=1200&q=80',
+    image: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1200&q=80',
   },
   {
     title: 'Café da Manhã',
@@ -53,8 +55,26 @@ const services: Service[] = [
 ]
 
 export default function ServicesPage() {
+  const rowsRef = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.12 }
+    )
+    rowsRef.current.forEach(row => { if (row) observer.observe(row) })
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <>
+    <div className="svc-page">
       {/* Page Hero */}
       <div className="page-hero">
         <div className="container">
@@ -76,19 +96,12 @@ export default function ServicesPage() {
         return (
           <div
             key={service.title}
+            ref={el => { rowsRef.current[index] = el }}
             className={`svc-row${reversed ? ' svc-row--reversed svc-row--alt' : ''}`}
           >
             <div className="svc-row__body">
               <h2 className="svc-row__title">{service.title}</h2>
               <p className="svc-row__text">{service.description}</p>
-              <a
-                href="https://wa.me/5573988613327"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ver-mais"
-              >
-                RESERVAR
-              </a>
             </div>
             <div className="svc-row__img">
               <img src={service.image} alt={service.title} loading="lazy" />
@@ -97,29 +110,9 @@ export default function ServicesPage() {
         )
       })}
 
-      {/* Exclusive Offer Banner */}
-      <section className="offer-banner">
-        <div className="container">
-          <div className="offer-banner-inner">
-            <div>
-              <span className="offer-banner-tag">OFERTA EXCLUSIVA</span>
-              <h2 className="offer-banner-title">
-                Reserve agora e aproveite 10% de desconto especial
-              </h2>
-            </div>
-            <a
-              href="https://wa.me/5573988613327?text=Olá!%20Quero%20o%20desconto%20de%2010%25."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              RESERVE JÁ!
-            </a>
-          </div>
-        </div>
-      </section>
+      <ExclusiveOffer />
 
       <Reviews />
-    </>
+    </div>
   )
 }
