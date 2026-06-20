@@ -1130,7 +1130,7 @@ ul  { list-style: none; }
   align-items: center;
   text-align: center;
 }
-@media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }
+@media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: center; } }
 
 .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
 .footer-bottom a { color: var(--color-accent); transition: opacity var(--transition); }

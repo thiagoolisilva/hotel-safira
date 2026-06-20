@@ -15,7 +15,7 @@ export default function Footer() {
             </p>
             <div style={{ display: 'flex', gap: '0.6rem', marginTop: '1.25rem' }}>
               <a
-                href="https://www.instagram.com/safirapraiahotel"
+                href="https://www.instagram.com/safirapraiahotel/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-btn"
@@ -24,7 +24,7 @@ export default function Footer() {
                 <Instagram size={16} />
               </a>
               <a
-                href="https://www.facebook.com/safirapraiahotel"
+                href="https://www.facebook.com/profile.php?id=100051879346154"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-btn"
