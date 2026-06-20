@@ -188,6 +188,21 @@ export default function ContactPage() {
                 >
                   <Facebook size={18} />
                 </a>
+                <a
+                  href="https://www.tripadvisor.com.br/Hotel_Review-g303270-d9741186-Reviews-Safira_Praia_Hotel-Porto_Seguro_State_of_Bahia.html"
+                  target="_blank" rel="noopener noreferrer"
+                  className="social-btn" aria-label="TripAdvisor"
+                >
+                  <svg width="20" height="14" viewBox="0 0 60 42" fill="currentColor" aria-hidden="true">
+                    <ellipse cx="15" cy="21" rx="12" ry="12" />
+                    <ellipse cx="45" cy="21" rx="12" ry="12" />
+                    <circle cx="15" cy="21" r="6" fill="var(--color-primary)" />
+                    <circle cx="45" cy="21" r="6" fill="var(--color-primary)" />
+                    <circle cx="15" cy="21" r="3" />
+                    <circle cx="45" cy="21" r="3" />
+                    <polygon points="30,4 35,14 25,14" />
+                  </svg>
+                </a>
               </div>
 
               {/* Map */}
