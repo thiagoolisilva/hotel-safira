@@ -12,12 +12,13 @@ const services = [
     description:
       'Piscinas projetadas para oferecer todo o conforto que você merece enquanto as crianças se divertem.',
     image: '/images/home-piscina.jpg',
+    objectPosition: 'center 65%',
   },
   {
     title: 'Estação Fit',
     description:
       'Equipamentos de musculação dedicados à sua saúde. Mantenha o treino em dia sem abrir mão das férias.',
-    image: '/images/home-estacao-fit.jpg',
+    image: '/images/servico-estacao-fit.jpg',
   },
 ]
 
@@ -37,7 +38,12 @@ export default function ServicesTeaser() {
                 <p className="svc-row__text">{service.description}</p>
               </div>
               <div className="svc-row__img">
-                <img src={service.image} alt={service.title} loading="lazy" />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  loading="lazy"
+                  style={'objectPosition' in service ? { objectPosition: service.objectPosition } : undefined}
+                />
               </div>
             </div>
           )

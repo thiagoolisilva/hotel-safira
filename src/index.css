@@ -1313,7 +1313,7 @@ body.menu-open .whatsapp-float { display: none; }
   /* default: text left, image right */
 }
 @media (min-width: 768px) {
-  .svc-row           { grid-template-columns: 1fr 2fr; height: 220px; }
+  .svc-row           { grid-template-columns: 1fr 2fr; height: 320px; }
   .svc-row--reversed { grid-template-columns: 2fr 1fr; }
   .svc-row--reversed .svc-row__img { order: -1; }
 }
