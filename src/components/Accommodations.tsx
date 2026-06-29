@@ -5,12 +5,12 @@ const rooms = [
   {
     title: 'Suíte Luxo',
     capacity: '2-4 PESSOAS',
-    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=900&q=80',
+    image: '/images/suite-luxo.jpg',
   },
   {
     title: 'Suíte Master',
     capacity: '2 PESSOAS',
-    image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=900&q=80',
+    image: '/images/suite-master.jpg',
   },
 ]
 

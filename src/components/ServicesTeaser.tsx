@@ -4,20 +4,20 @@ const services = [
   {
     title: 'Praia de Taperapuã',
     description:
-      'Há apenas 7 minutos do hotel, encontre a praia mais famosa da orla norte com águas calmas e brisa suave.',
-    image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=80',
+      'à apenas 7 minutos do hotel, encontre a praia mais famosa da orla norte com águas calmas e brisa suave.',
+    image: '/images/servico-praia.jpg',
   },
   {
     title: 'Piscina Adulto e Infantil',
     description:
       'Piscinas projetadas para oferecer todo o conforto que você merece enquanto as crianças se divertem.',
-    image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80',
+    image: '/images/home-piscina.jpg',
   },
   {
     title: 'Estação Fit',
     description:
       'Equipamentos de musculação dedicados à sua saúde. Mantenha o treino em dia sem abrir mão das férias.',
-    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900&q=80',
+    image: '/images/home-estacao-fit.jpg',
   },
 ]
 

@@ -13,9 +13,9 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920&q=80"
+        poster="/images/about-main.jpg"
       >
-        <source src="/hero-video.mp4" type="video/mp4" />
+        <source src="/images/hero-video.mp4" type="video/mp4" />
       </video>
 
       <div className="hero-overlay" />

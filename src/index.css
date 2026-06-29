@@ -1189,10 +1189,10 @@ body.menu-open .whatsapp-float { display: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80') center/cover no-repeat;
+  background: url('/images/servicos-hero.jpg') center/cover no-repeat;
 }
 .page-hero--contact::before {
-  background: url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=1600&q=80') center/cover no-repeat;
+  background: url('/images/contato-hero.jpg') center/cover no-repeat;
 }
 .page-hero::after {
   content: '';

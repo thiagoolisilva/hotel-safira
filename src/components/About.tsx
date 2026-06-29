@@ -8,14 +8,14 @@ export default function About() {
           <div className="about-images-col">
             <div className="about-img-primary">
               <img
-                src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=900&q=80"
+                src="/images/about-main.jpg"
                 alt="Safira Praia Hotel"
               />
             </div>
             {/* Aerial photo overlapping bottom-right */}
             <div className="about-img-overlay">
               <img
-                src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=500&q=80"
+                src="/images/about-overlay.jpg"
                 alt="Vista aérea do hotel"
               />
             </div>

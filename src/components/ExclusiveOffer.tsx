@@ -2,7 +2,7 @@ export default function ExclusiveOffer() {
   return (
     <section className="excl-offer">
       <img
-        src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1600&q=80"
+        src="/images/oferta-banner.jpg"
         alt="Piscina Safira Praia Hotel"
         className="excl-offer__img"
       />
